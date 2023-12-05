@@ -192,4 +192,6 @@ class CacheStore {
     final provider = await _cacheInfoRepository;
     await provider.close();
   }
+
+  Iterable<String> getKeysFromMemory() => _memCache.keys;
 }

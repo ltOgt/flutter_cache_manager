@@ -88,6 +88,9 @@ abstract class BaseCacheManager {
   /// Removes all files from the cache
   Future<void> emptyCache();
 
+  /// Lists all keys the cache holds in memory
+  Iterable<String> getKeysFromMemory();
+
   /// Closes the cache database
   Future<void> dispose();
 }

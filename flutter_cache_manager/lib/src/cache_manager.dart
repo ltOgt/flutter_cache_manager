@@ -284,6 +284,10 @@ class CacheManager implements BaseCacheManager {
   @override
   Future<void> emptyCache() => _store.emptyCache();
 
+  /// Lists all keys the cache holds in memory
+  @override
+  Iterable<String> getKeysFromMemory() => _store.getKeysFromMemory();
+
   /// Closes the cache database
   @override
   Future<void> dispose() async {
